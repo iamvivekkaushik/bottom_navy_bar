@@ -43,11 +43,11 @@ class BottomBarItem extends StatelessWidget {
         scrollDirection: Axis.horizontal,
         physics: NeverScrollableScrollPhysics(),
         child: Container(
-          width: item.width + item.startPadding,
+          width: item.width,
           padding: EdgeInsets.symmetric(horizontal: 8),
           child: Row(
             mainAxisSize: MainAxisSize.max,
-            mainAxisAlignment: MainAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
               IconTheme(
@@ -61,6 +61,8 @@ class BottomBarItem extends StatelessWidget {
                 ),
                 child: item.icon,
               ),
+              if (isSelected)
+                SizedBox(width: item.startPadding,),
               if (isSelected)
                 Expanded(
                   child: Container(
