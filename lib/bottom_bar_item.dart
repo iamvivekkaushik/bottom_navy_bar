@@ -43,7 +43,7 @@ class BottomBarItem extends StatelessWidget {
         scrollDirection: Axis.horizontal,
         physics: NeverScrollableScrollPhysics(),
         child: Container(
-          width: item.width,
+          width: item.width + item.startPadding,
           padding: EdgeInsets.symmetric(horizontal: 8),
           child: Row(
             mainAxisSize: MainAxisSize.max,
