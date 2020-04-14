@@ -31,7 +31,7 @@ class BottomBarItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AnimatedContainer(
-      width: item.width,
+      width:  isSelected ? item.selectionWidth : item.width,
       height: double.maxFinite,
       duration: animationDuration,
       curve: curve,
@@ -43,10 +43,10 @@ class BottomBarItem extends StatelessWidget {
         scrollDirection: Axis.horizontal,
         physics: NeverScrollableScrollPhysics(),
         child: Container(
-          width: item.width,
+          width: isSelected ? item.selectionWidth : item.width,
           padding: EdgeInsets.symmetric(horizontal: 8),
           child: Row(
-            mainAxisSize: MainAxisSize.max,
+            mainAxisSize: MainAxisSize.min,
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[

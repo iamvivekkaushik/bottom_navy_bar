@@ -4,6 +4,7 @@ class BottomNavyBarItem {
   final Icon icon;
   final Text title;
   final double width;
+  final double selectionWidth;
   final double startPadding;
   final Color activeColor;
   final Color inactiveColor;
@@ -13,6 +14,7 @@ class BottomNavyBarItem {
     @required this.icon,
     @required this.title,
     @required this.width,
+    @required this.selectionWidth,
     this.startPadding = 0,
     this.activeColor = Colors.blue,
     this.textAlign,
