@@ -70,17 +70,20 @@ class _MyHomePageState extends State<MyHomePage> {
           BottomNavyBarItem(
             icon: Icon(Icons.apps),
             title: Text('Home'),
+            width: 110,
             activeColor: Colors.red,
             textAlign: TextAlign.center,
           ),
           BottomNavyBarItem(
             icon: Icon(Icons.people),
             title: Text('Users'),
+            width: 50,
             activeColor: Colors.purpleAccent,
             textAlign: TextAlign.center,
           ),
           BottomNavyBarItem(
             icon: Icon(Icons.message),
+            width: 50,
             title: Text(
               'Messages test for mes teset test test ',
             ),
@@ -90,6 +93,7 @@ class _MyHomePageState extends State<MyHomePage> {
           BottomNavyBarItem(
             icon: Icon(Icons.settings),
             title: Text('Settings'),
+            width: 50,
             activeColor: Colors.blue,
             textAlign: TextAlign.center,
           ),
